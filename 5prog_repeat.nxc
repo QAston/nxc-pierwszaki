@@ -1,0 +1,9 @@
+task main() {
+     // repeat - blok powtarzania
+     // w nawiasach - liczba powtorzen
+     repeat (4) {
+       OnFwd(OUT_A,100);
+       OnRev(OUT_C,100);
+       Wait (1000);
+     }
+}

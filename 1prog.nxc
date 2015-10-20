@@ -1,3 +1,10 @@
+// za "//" sa komentarze
+// komentarze sa ignorowane przez program i sa przeznaczone dla ludzi
+// nie piszemy polskich znakow
+
+// task main to glowny blok programu
+// bloki sa oznaczane { - poczatek } - koniec
 task main() {
-     printf("asd")
+     // w blokach sa instrukcje zakonczone ;
+     TextOut(0, 0, "Witaj Swiecie", 0); // Wypisywanie
 }

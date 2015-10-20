@@ -1,0 +1,26 @@
+task main() {
+     // zmienne, to takie miejsca w pamieci komputera w ktorych mozna przechowywac wartosc
+     // tworzenie nowej zmiennej:
+     // rodzajZmiennej (w tym wypadku int) nazwaZmiennej =  wartosc
+     int szybkoscObrotow = 100;
+     int liczbaPowtorzen = 4;
+     repeat (liczbaPowtorzen) {
+       OnFwd(OUT_A,szybkoscObrotow);
+       OnRev(OUT_C,szybkoscObrotow);   // silnik C do tylu
+       Wait (1000);
+     }
+     // zmiana wartosci istniejacej zmiennej
+     // nazwaZmiennej = nowaWartosc;
+     // tym razem robot bedzie jechal o polowe wolniej
+     szybkoscObrotow = 50;
+     repeat (liczbaPowtorzen) {
+       OnFwd(OUT_A,szybkoscObrotow);
+       OnRev(OUT_C,szybkoscObrotow);   // silnik C do tylu
+       Wait (1000);
+     }
+     
+     // rodzaje zmiennej:
+     // string- napis
+     // int - liczba calkowita
+     // float - liczba zmiennoprzecinkowa - ulamek dziesietny o ograniczonej dokladnosci
+}

@@ -1,0 +1,5 @@
+task main() {
+     OnFwd(OUT_A,100);   //  silnik A do przodu
+     OnFwd(OUT_C,100);
+     Wait (5000);
+}

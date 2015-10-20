@@ -1,4 +1,4 @@
 task main() {
      TextOut(0, 0, "Witaj Swiecie", 0);
-     Wait(50000);
+     Wait(50000);     // czekanie
 }

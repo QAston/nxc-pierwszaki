@@ -1,0 +1,23 @@
+// program wyswietla aktualny odczyt z sensora odleglosci
+// aby przerwac wcisnij naraz pomaranczowy i czarny przycisk na kostce
+
+// stale (NIEZMIENNE) sluza do nadawania nowych nazw dla wartosci w kodzie
+// przyklad uzycia - ustawiamy w 1 miejscu w kodzie do ktorego portu jest podlaczony sensor odleglosci
+// w tym wypadku do IN_2
+// potem duzo latwiej zmienic, niz gdyby tej stalej nie bylo
+#define PORT_ODLEGLOSC IN_2
+task main() {
+  SetSensor(PORT_ODLEGLOSC, SENSOR_LOWSPEED_9V); // inicjalizacja sensora odleglosci
+  // sensor odleglosci wydaje ultradzwieki i na podstawie czasu ich powrotu ocenia odleglosc
+  
+  // nieskonczona petla
+  while (1){
+        int odczytSensora = SensorUS(PORT_ODLEGLOSC); // zapis odczytu do zmiennej
+        ClearScreen();      // czyszczenie ekranu
+        NumOut(5,5,odczytSensora);    // wypisujemy wartosc zmiennej
+        Wait(100); // aktualizuj wartosc co 100 ms
+  }
+}
+// wiecej o sensorach:
+// http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/group___input_module_functions.html
+// http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/group___low_speed_module_functions.html

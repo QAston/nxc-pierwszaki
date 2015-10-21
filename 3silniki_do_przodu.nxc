@@ -1,0 +1,8 @@
+// silniki podlaczamy do portow A B C u gory kostki
+
+// program jedzie do przodu przez 5 sekund
+task main() {
+     OnFwd(OUT_A,100);   //  silnik A do przodu  OUT_A- port A
+     OnFwd(OUT_C,100);   // 100 - moc silnika, od -100 do 100
+     Wait (5000);
+}

@@ -1,0 +1,23 @@
+// program co sekunde zwieksza moc silnika o 10
+// co daje efekt rozpedzania sie robota
+task main() {
+     // zmienne, to takie miejsca w pamieci komputera w ktorych mozna przechowywac wartosc
+     // tworzenie nowej zmiennej:
+     // rodzajZmiennej (w tym wypadku int) nazwaZmiennej =  wartosc
+     int szybkoscObrotow = 10;
+     int liczbaPowtorzen = 10;
+     repeat (liczbaPowtorzen) {
+       OnFwd(OUT_A,szybkoscObrotow);
+       OnFwd(OUT_C,szybkoscObrotow);
+       Wait (1000);
+       szybkoscObrotow = szybkoscObrotow + 10;   // dodajemy do zmiennej 10
+     }
+
+}
+// rodzaje zmiennych:
+// string- napis
+// int - liczba calkowita
+// float - liczba zmiennoprzecinkowa - ulamek dziesietny o ograniczonej dokladnosci
+// wiecej o zmiennych:
+// http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/vardecl.html
+// http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/asgn.html

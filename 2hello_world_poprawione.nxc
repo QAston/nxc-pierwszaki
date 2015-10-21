@@ -1,0 +1,5 @@
+// program wyswietla napis witaj swiecie przez 5 sekund
+task main() {
+     TextOut(0, 0, "Witaj Swiecie", 0);
+     Wait(5000);     // czekanie
+}

@@ -1,0 +1,6 @@
+// program sprawia, ze robot skreca w miejscu przez 5 sekund
+task main() {
+     OnFwd(OUT_A,100);
+     OnRev(OUT_C,100);   // OnRev - jazda do tylu silnikiem C
+     Wait (5000);
+}

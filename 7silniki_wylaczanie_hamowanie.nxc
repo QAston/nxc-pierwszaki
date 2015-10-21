@@ -1,0 +1,24 @@
+// program rozpedza robota, wylacza silniki, znowu rozpedza i ostro hamuje
+task main() {
+     int szybkoscObrotow = 100;
+     // rozpedzanie
+     OnFwd(OUT_A,szybkoscObrotow);
+     OnFwd(OUT_C,szybkoscObrotow);
+     Wait(3000);
+     // wylaczenie silnikow, bez hamowania
+     Coast(OUT_A);
+     Coast(OUT_C);
+     Wait(2000);
+     // ponowne rozpedzanie
+     OnFwd(OUT_A,szybkoscObrotow);
+     OnFwd(OUT_C,szybkoscObrotow);
+     Wait(3000);
+     // hamowanie silnikami, robota trudniej ruszyc
+     Stop(OUT_A);
+     Stop(OUT_C);
+     Wait(1000);
+}
+
+// wiecej o silnikach:
+// http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/group___output_module_functions.html
+// templates: Outputs

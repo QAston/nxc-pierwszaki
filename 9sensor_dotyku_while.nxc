@@ -1,0 +1,19 @@
+// program wyswietla 0 jesli nie wcisniety, 1 jesli wcisniety sensor dotyku
+// aby przerwac wcisnij naraz pomaranczowy i czarny przycisk na kostce
+task main() {
+  SetSensor(IN_1,SENSOR_TOUCH); // inicjalizacja sensora dotyku
+  
+  // petla while (warunek) {blok}
+  // w tym wypadku warunek = 1 (TRUE)
+  // gdy warunek bedzie 0, program opusci blok while, gdy bedzie 1 blok bedzie ponownie wykonywany
+  // w tym wypadku blok while bedzie powtarzany caly czas
+  // aby przerwac program wcisnij pomaranczowy i czarny guzik naraz
+  // wiecej o warunkach: http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/condtn.html
+  while (1){
+        int odczytSensora = SensorValue(IN_1); // zapis odczytu do zmiennej
+        NumOut(0,0,odczytSensora);    // wypisujemy wartosc zmiennej
+        Wait(100); // aktualizuj wartosc co 100 ms
+  }
+  // wiecej o petli while:
+  // http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/while.html
+}

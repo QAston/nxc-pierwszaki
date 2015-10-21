@@ -17,7 +17,6 @@ task main() {
 // rodzaje zmiennych:
 // string- napis
 // int - liczba calkowita
-// float - liczba zmiennoprzecinkowa - ulamek dziesietny o ograniczonej dokladnosci
+// float - ulamek dziesietny o ograniczonej dokladnosci
 // wiecej o zmiennych:
-// http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/vardecl.html
-// http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/asgn.html
+// http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/vars.html

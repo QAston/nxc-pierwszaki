@@ -1,4 +1,5 @@
 // silniki podlaczamy do portow A B C u gory kostki
+// przerwanie programu: pomaranczowy + czarny guzik jednoczesnie
 
 // program jedzie do przodu przez 5 sekund
 task main() {

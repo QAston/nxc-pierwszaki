@@ -1,0 +1,10 @@
+// program jedzie do przodu az do wcisnienia sensora dotyku, po wcisnieciu konczy sie
+task main() {
+  SetSensor(IN_1,SENSOR_TOUCH); // inicjalizacja sensora dotyku
+  OnFwd(OUT_AC, 100); // wlacz oba silniki naraz
+  int odczytSensora = 0;
+  while (odczytSensora == 0){ // powtarzaj odczyt sensora gdy ostatni odczyt byl 0
+  // wiecej o warunkach: http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/condtn.html
+         odczytSensora = SensorValue(IN_1);
+  }
+}

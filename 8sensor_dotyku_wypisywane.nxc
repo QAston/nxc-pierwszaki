@@ -1,0 +1,14 @@
+// jesli przy wlaczeniu programu byl wcisniety sensor dotyku
+// program wyswietli 1, jesli nie, 0
+task main() {
+  // inicjalizacja sensora
+  // IN_X - port wejsciowy X
+  // SENSOR_TOUCH - rodzaj sensora
+  // rodzaje sensorow:
+  // http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/group___sensor_type_modes.html
+  SetSensor(IN_1,SENSOR_TOUCH); // inicjalizacja sensora dotyku
+
+  int odczytSensora = SensorValue(IN_1); // zapis odczytu do zmiennej
+  NumOut(0,0,odczytSensora);    // wypisujemy wartosc zmiennej
+  Wait(3000);
+}

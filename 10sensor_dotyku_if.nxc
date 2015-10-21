@@ -1,0 +1,26 @@
+// program wyswietla NIE WCISNIETY jesli nie wcisniety, WCISNIETY jesli wcisniety sensor dotyku
+// aby przerwac wcisnij naraz pomaranczowy i czarny przycisk na kostce
+task main() {
+  SetSensor(IN_1,SENSOR_TOUCH); // inicjalizacja sensora dotyku
+
+  while (1){
+        int odczytSensora = SensorValue(IN_1); // zapis odczytu do zmiennej
+        // if (warunek)
+        // {} blok wykonany gdy warunek = 1
+        // else
+        // {} blok wykonany gdy warunek = 0
+        // o if/else:
+        // http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/else.html
+        // o warunkach:
+        // http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/condtn.html
+        
+        // odczytSensora ma wartosc 1 gdy wcisniety, 0 gdy niewcisniety
+        if (odczytSensora) {
+           TextOut(0,0,"WCISNIETY");
+        }
+        else {
+           TextOut(0,0,"NIE WCISNIETY");
+        }
+        Wait(100); // aktualizuj wartosc co 100 ms
+  }
+}

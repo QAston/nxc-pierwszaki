@@ -1,0 +1,17 @@
+// program wyswietla poziom jasnosci odczytany z sensora swiatla
+// aby przerwac wcisnij naraz pomaranczowy i czarny przycisk na kostce
+
+#define PORT_SWIATLO IN_2
+task main() {
+  SetSensor(PORT_SWIATLO, SENSOR_NXTLIGHT); // inicjalizacja sensora swiatla
+  // sensor swiatla to taki co ma 2 pypcie zamiast 3:P
+  // odczytuje jasnosc za pomoca swiatla odbitego zbieranego przez czujnik
+
+  // nieskonczona petla
+  while (1){
+        int odczytSensora = SensorValue(PORT_SWIATLO); // zapis odczytu do zmiennej
+        ClearScreen();      // czyszczenie ekranu
+        NumOut(0,0,odczytSensora);
+        Wait(100); // aktualizuj wartosc co 100 ms
+  }
+}

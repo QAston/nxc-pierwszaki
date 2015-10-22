@@ -1,0 +1,38 @@
+// program rozpoznaje kolory i wypisuje na ekranie
+// aby przerwac wcisnij naraz pomaranczowy i czarny przycisk na kostce
+
+#define PORT_KOLOR IN_2
+task main() {
+  SetSensor(PORT_KOLOR, SENSOR_COLORFULL); // inicjalizacja sensora koloru (wszystkie diody zapalone)
+
+  // nieskonczona petla
+  while (1){
+        int odczytSensora = SensorValue(PORT_KOLOR); // zapis odczytu do zmiennej
+        // nowa konstrukcja kontrolna: switch-case
+        // http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/switch.html
+        // wartosci kolorow:
+        // http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/group___input_color_value_constants.html
+        ClearScreen();      // czyszczenie ekranu
+        switch (odczytSensora) {
+               case INPUT_BLACKCOLOR:
+                TextOut(0,0,"Czarny");
+                break;
+               case INPUT_BLUECOLOR:
+                TextOut(0,0,"Niebieski");
+                break;
+               case INPUT_GREENCOLOR:
+                TextOut(0,0,"Zielony");
+                break;
+               case INPUT_YELLOWCOLOR:
+                TextOut(0,0,"Zolty");
+                break;
+               case INPUT_REDCOLOR:
+                TextOut(0,0,"Czerwony");
+                break;
+               case INPUT_WHITECOLOR:
+                TextOut(0,0,"Bialy");
+                break;
+        }
+        Wait(100); // aktualizuj wartosc co 100 ms
+  }
+}

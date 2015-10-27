@@ -11,3 +11,5 @@ http://bricxcc.sourceforge.net/ - strona nxc
 
 http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/lang.html - dokumentacja HTML
 http://bricxcc.sourceforge.net/nbc/nxcdoc/NXC_Guide.pdf - dokumentacja PDF
+
+http://www.nxtprograms.com - przykladowe roboty i programy w nxt-g

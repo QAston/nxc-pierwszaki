@@ -9,4 +9,5 @@ http://bricxcc.sourceforge.net/nbc/nxcdoc/NXC_tutorial.pdf - tutorial
 
 http://bricxcc.sourceforge.net/ - strona nxc
 
-http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/lang.html - dokumentacja
+http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/lang.html - dokumentacja HTML
+http://bricxcc.sourceforge.net/nbc/nxcdoc/NXC_Guide.pdf - dokumentacja PDF

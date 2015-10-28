@@ -23,7 +23,7 @@ task main() {
         indexOstatniegoOdczytu = (indexOstatniegoOdczytu + 1) % LICZBA_ODCZYTOW_ODLEGLOSCI;
         ostatnieOdczyty [indexOstatniegoOdczytu] = SensorUS(PORT_ODLEGLOSC); // dodajemy nowy odczyt do tablicy
         ClearScreen();      // czyszczenie ekranu
-        byte srednia = ArrayMean(ostatnieOdczyty, 0,  10);
+        byte srednia = ArrayMean(ostatnieOdczyty, 0,  LICZBA_ODCZYTOW_ODLEGLOSCI);
         // oblicz srednia odczytow
         // wiecej funkcji na tablicach:
         //http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/group___array_functions.html

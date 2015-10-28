@@ -1,0 +1,32 @@
+// program wyswietla aktualny odczyt z ostatnich odczytow sensora odleglosci
+// aby przerwac wcisnij naraz pomaranczowy i czarny przycisk na kostce
+
+#define PORT_ODLEGLOSC IN_2
+#define LICZBA_ODCZYTOW_ODLEGLOSCI 10
+task main() {
+  SetSensor(PORT_ODLEGLOSC, SENSOR_LOWSPEED_9V); // inicjalizacja sensora odleglosci
+  
+  // inicjalizujemy odczyty pierwszym, zeby srednia nie byla za niska/wysoka na poczatku
+  byte pierwszy = SensorUS(PORT_ODLEGLOSC);
+  byte ostatnieOdczyty[LICZBA_ODCZYTOW_ODLEGLOSCI];    // tworzymy pusta tablice
+  
+  // wiecej o tablicach:
+  http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/arrays.html
+  for (int i = 0; i < LICZBA_ODCZYTOW_ODLEGLOSCI; ++i) {
+      ostatnieOdczyty[i] = pierwszy;
+  }
+  
+  int indexOstatniegoOdczytu = 0;
+
+  // nieskonczona petla
+  while (1){
+        indexOstatniegoOdczytu = (indexOstatniegoOdczytu + 1) % LICZBA_ODCZYTOW_ODLEGLOSCI;
+        ostatnieOdczyty [indexOstatniegoOdczytu] = SensorUS(PORT_ODLEGLOSC); // dodajemy nowy odczyt do tablicy
+        ClearScreen();      // czyszczenie ekranu
+        byte srednia = ArrayMean(ostatnieOdczyty, 0,  10);
+        // oblicz srednia odczytow
+        // wiecej funkcji na tablicach:
+        //http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/group___array_functions.html
+        NumOut(0,0,srednia);
+  }
+}
